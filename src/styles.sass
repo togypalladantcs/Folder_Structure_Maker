@@ -1,0 +1,61 @@
+body 
+	font-family: 'Roboto', sans-serif
+	margin: 0
+	padding: 0
+
+.node 
+	display: flex
+	padding: 8px
+	margin: 8px
+	border-radius: 4px
+	width: fit-content
+	align-items: center
+	img.icon 
+		height: 16px
+	
+	input 
+		border-color: black
+		border-radius: 4px
+		font-size: 12px
+		padding: 4px 8px
+	
+	i 
+		visibility: hidden
+		cursor: pointer
+	
+	&:not(.no-highlight):hover 
+		outline: 2px solid black
+		i 
+			visibility: visible
+		
+	
+	> *:not(:first-child):not(:last-child) 
+		margin: 0 4px
+	
+	> *:first-child 
+		margin-right: 4px
+	
+	> *:last-child 
+		margin-left: 4px
+	
+
+.child 
+	margin-left: 32px	
+	.node-container 
+		border-left: 2px solid #646464
+		display: flex
+		align-items: center
+		position: relative
+		&:before 
+			content: ""
+			position: relative
+			top: -0.3em
+			height: 1em
+			width: 12px
+			color: white
+			border-bottom: 2px solid #646464
+			content: ''
+			display: inline-block
+		
+	
+
